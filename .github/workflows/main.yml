@@ -30,7 +30,7 @@ jobs:
         run: git checkout -b "greencode-${{ github.sha }}"
 
       - name: Run green code converter
-        run: node ./gemin.js
+        run: node ./converter.js
 
       - name: Check for changes
         run: |

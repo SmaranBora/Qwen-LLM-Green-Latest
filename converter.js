@@ -1,6 +1,6 @@
 import { promises as fs } from "fs";
 import axios from "axios";
-const url = "http://192.168.1.3:5000/optimize";
+const url = "http://127.0.0.1:5000/optimize";
 
 async function convertToGreenCode() {
   try {

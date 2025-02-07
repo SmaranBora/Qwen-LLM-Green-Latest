@@ -8,10 +8,14 @@ on:
 jobs:
   convert-and-push:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Allow GitHub Actions to push changes
 
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v3
+        with:
+          persist-credentials: false  # Prevents using the default GitHub token
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
